@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname),
-        filename: 'bundle.js',
+        filename: './dist/app.bundle.js',
     },
     module: {
         rules: [
@@ -32,7 +32,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             allChunks: true,
-            filename: 'styles.css',
+            filename: './dist/styles.css',
         }),
     ],
 };
