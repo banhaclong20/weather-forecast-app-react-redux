@@ -1,5 +1,7 @@
 # weather-forecast-app
-Responsive Weather Forecast Application - Using React, Redux, React Router, Webpack
+Responsive Weather Forecast Application - Using React, Redux, React Router, Webpack & SASS
+
+Using Unsplash API to get the thumbnail image in detail page base on the location.
 
 <img alt="Responsive Weather Forecast" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/365781/weather-app3.jpg" width="auto" height="auto"/>
 
