@@ -1,0 +1,105 @@
+@import 'mixins'
+
+// Fonts
+$font-header: 'Quicksand', sans-serif
+$font-body: 'Raleway', sans-serif
+
+// Colors
+$very-warm: #F75E50
+$warm: #EAC761
+$normal: #91C09E
+$cold: #06799F
+$very-cold: #BAB9B5
+
+body
+  font-family: $font-body
+
+h1, h2, h3, h4, h5
+  font-family: $font-header
+
+  @include mobile
+    text-align: center
+
+hr
+  border-top: 1px solid white
+
+.button-back
+  color: white
+  cursor: pointer
+  font-size: 1rem
+  float: left
+
+  &:hover
+    color: white
+
+.detail-icon
+  font-size: 10rem
+  padding-bottom: 10%
+
+.detail-icon-small
+  font-size: 2rem
+  margin-right: 5%
+
+.detail-weather-widget
+  border-radius: 1rem
+  color: white
+  margin: 10%
+  padding: 5%
+  text-align: center
+
+  .very-warm
+     background-color: $very-warm
+  &.warm
+    background-color: $warm
+  &.normal
+    background-color: $normal
+  &.cold
+    background-color: $cold
+  &.very-cold
+    background-color: $very-cold
+
+.list-icon
+  font-size: 80px
+  text-align: right
+
+  @include mobile
+    text-align: center
+
+.list-link:hover
+  text-decoration: none
+
+.list-weather-widget
+  border-radius: 1rem
+  color: white
+  font-weight: 100
+  font-style: normal
+  margin-bottom: 1rem
+  padding: 5% 10%
+
+  @include mobile
+    padding: 2%
+
+
+
+  .very-warm
+     +setBgColorAndHover($very-warm)
+  &.warm
+    +setBgColorAndHover($warm)
+  &.normal
+    +setBgColorAndHover($normal)
+  &.cold
+    +setBgColorAndHover($cold)
+  &.very-cold
+    +setBgColorAndHover($very-cold)
+
+.margin-top
+  margin-top: 50px
+
+.search-input
+  border: none
+  border-bottom: 1px solid
+  margin: 3rem 0
+  width: 100%
+
+.search-input:focus
+  outline: none

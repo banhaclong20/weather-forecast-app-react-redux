@@ -1,0 +1,11 @@
+@mixin setBgColorAndHover($baseColor)
+  background-color: $baseColor
+  &:hover
+    background-color: darken($baseColor, 20%)
+
+
+// Breakpoints
+$mobile-width: 600px
+@mixin mobile
+  @media (max-width: $mobile-width)
+    @content

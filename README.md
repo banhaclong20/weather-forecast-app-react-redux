@@ -1,5 +1,5 @@
-# react-starter-kit
-ReactJS starter with Webpack, Babel, SASS and ESlint
+# weather-forecast-app
+Responsive Weather Forecast Application - Using React, Redux, React Router, Webpack
 
 ## Getting started
 

@@ -1,9 +1,256 @@
 @import 'variables';
 
 body {
-    background: $bg-body;
+	font-family: $font-family;
+    background: #56CCF2;
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
 }
 
 h2 {
-    font-family: $font-family;
+	font-weight: 300;
+	font-size: 3rem;
+	padding-bottom: 15px;
+	text-shadow: 1px 3px 8px #414142;
+}
+
+h3 {
+	text-transform: uppercase;
+	background-color: $white;
+	background-image: linear-gradient(to bottom, #cfd6d5, #ffffff, #ffe9a8, #ffffff);
+    background-size: auto 250%;
+    background-position: 0 100%;
+    transition: background-position 0.5s;
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+	&:hover {
+		background-position: 0 0;
+		cursor: pointer;
+	}
+}
+
+h4 {
+    font-weight: 300;
+}
+
+.container {
+	margin: 5% 25%;
+}
+
+@media only screen and (max-width: 920px) {
+	.container {
+		margin: 5%;
+	}
+}
+
+.heading {
+	text-align: center;
+	margin-bottom: 5%;
+
+	span {
+		font-size: 80%;
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    color: $white;
+    border: 2px solid $white;
+    height: 50px;
+    line-height: 3;
+    font-size: 1.1rem;
+    margin-bottom: 1em;
+    border-radius: 25px;
+	padding: 10px 20px;
+	transition: border .3s ease;
+	
+	&:focus,
+	&:active {
+		border: 2px solid #E0E0E0;
+		outline: 0;
+	}
+}
+
+input::-webkit-input-placeholder {
+	color: $white;
+	transition: all .3s ease;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: #E0E0E0;
+}
+
+input:-moz-placeholder {
+	color: #FFF;
+}
+
+input:focus:-moz-placeholder {
+	color: #FFF;
+}
+
+input::-moz-placeholder {
+	color: #FFF;
+}
+
+input:hover::-moz-placeholder {
+	color: #FFF;
+}
+
+input:-ms-input-placeholder {
+	color: #FFF;
+}
+
+input:hover:-ms-input-placeholder {
+	color: #FFF;
+}
+
+.list-weather-widget {
+	display: block;
+	position: relative;
+    border-radius: 1rem;
+    color: $white;
+    font-weight: 100;
+    font-style: normal;
+    margin-bottom: 1rem;
+	padding: 3%;
+	margin: 2em 0.2em;
+	box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+	transition: transform .3s ease;
+
+	&:hover {
+		transform: scale(1.02);	
+	}
+}
+
+@media (max-width: 600px) {
+    .list-weather-widget {
+        padding: 2%
+    }
+}
+
+.list-weather-widget.hot {
+	background: url(/assets/bg/hot-weather-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.list-weather-widget.warm {
+	background: url(/assets/bg/warm-weather-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.list-weather-widget.normal {
+    background: url(/assets/bg/normal-weather-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.list-weather-widget.cold {
+    background: url(/assets/bg/cold-weather-bg.jpg) no-repeat left 20%;
+    background-size: cover;
+}
+
+.list-weather-widget.very-cold {
+    background: url(/assets/bg/very-cold-weather-bg.png) no-repeat center;
+    background-size: cover;
+}
+
+.status {
+	color: #FFEB3B;
+    font-weight: 700;
+    font-size: 70%;
+    border: 2px solid #FFEB3B;
+    padding: 4px 10px;
+    border-radius: 15px;
+	text-transform: uppercase;
+    outline: 0;
+}
+
+/* Detail page */
+
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.footer-content {
+	background: #FFF;
+    color: #444;
+	border-radius: 0 0 10px 10px;
+	min-height: 120px;
+	
+	.status-weather {
+		color: #ffffff;
+		margin: -1em auto 1em;
+		text-transform: capitalize;
+		background: #795548;
+		padding-top: 10px;
+		padding-bottom: 4px;
+	}
+
+	.detail-icon-small {
+		font-size: 2rem;
+		margin-right: 5%;
+		position: relative;
+		top: 5px;
+	}	
+}
+
+.button-back {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    float: left;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 2em;
+	background: #1c6f8e;
+	transition: all .3s ease;
+	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: #FFF;
+		background: #115168;
+	}
+}
+
+
+.detail-icon {
+    font-size: 10rem;
+	padding-bottom: 10%;
+	text-shadow: 1px 3px 8px #414142;
+}
+
+.detail-weather-widget {
+    border-radius: 1rem;
+    color: white;
+    margin: 10% 15%;
+	text-align: center;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+	
+	h1 {
+		font-size: 4rem;
+		text-shadow: 1px 3px 8px #414142;
+	}
+}
+
+.list-icon {
+    font-size: 80px;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .list-icon {
+        text-align: center;
+    }
+}
+
+.list-link:hover {
+    text-decoration: none;
 }
